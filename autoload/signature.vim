@@ -15,4 +15,10 @@ fun! signature#hide()
   call rpcnotify(0, "Gui", "signature#hide")
 endf
 
+" { foreground: color, background: color,
+"   active-sig-backround: color, active-param-foreground: color }
+fun! signature#set_style(style)
+  call rpcnotify(0, "Gui", "signature#set_style", a:style)
+endf
+
 autocmd InsertLeave * call signature#hide()
