@@ -1,0 +1,25 @@
+*popupmenu.txt*	Interface for gui popup menu provided by neovim-qt
+
+Version: 1.0
+Author: Jarosław Sierant
+License: The GNU General Public License v3.0
+
+==============================================================================
+FUNCTIONS *popupmenu-functions*
+
+						*popupmenu#set_style({options})*
+popupmenu#set_style({options})
+	Customize popup menu style
+	{options} is a dictionary with optional keys:
+		foreground - color of the font in menu
+		background - background color
+		selected - background color of the selected item
+		scrollbar-foreground - the handle color of the scrollbar
+		scrollbar-background - background color of the scrollbar
+
+						*popupmenu#set_kind_config({config})*
+popupmenu#set_kind_config({options})
+	Customize kind appearance of the completion item.
+	{config} is a dictionary with format: { kind: [abbreviation, background-color ] }
+	e.g.:  {'Text': ['tx', '#076678'], 'Function': ['fn', '#00a7af']}
+
